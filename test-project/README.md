@@ -1,5 +1,5 @@
 # test-project
-
+A test project for git and Vue CLI practice
 ## Project setup
 ```
 npm install
