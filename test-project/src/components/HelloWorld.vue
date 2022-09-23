@@ -4,8 +4,9 @@
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.<br>
     </p>
+    <div class="link-box"><span class="my-project"><a><router-link to="/my-project">Check out my test project!</router-link></a></span></div>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
@@ -55,4 +56,54 @@ li {
 a {
   color: #42b983;
 }
+
+.link-box {
+  display: flex;
+  justify-content: center;
+  box-sizing: content-box;
+}
+
+.my-project a {
+  display: block;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #2c3e50;
+}
+
+.my-project a:hover {
+  cursor: pointer;
+}
+
+.my-project a::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  transform-origin: 100%;
+  transform: scaleX(0);
+  background-color: forestgreen;
+  transition: all 0.2s;
+}
+
+.my-project a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  transform-origin: 0%;
+  transform: scaleX(0);
+  background-color: forestgreen;
+  transition: all 0.2s;
+}
+
+.my-project a:hover::before {
+  transform: scaleX(1);
+}
+
+.my-project a:hover::after {
+  transform: scaleX(1);
+}
+
+
 </style>
